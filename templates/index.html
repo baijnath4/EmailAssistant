@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,200;0,300;0,400;1,200&family=Inter:wght@200;300;400&family=Lato:wght@100;300&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='../static/styles/sytleCss.css') }}">
+    
+
+    <title>DocAssistant</title>
+</head>
+<body>
+
+    <nav class="NavClass">
+      
+        <img src="{{url_for('static', filename='../static/images/ibm_logo_white_text.svg')}}" alt="IBM">
+       
+        <h2>WatsonX DocAssistant</h2>
+    </nav>
+
+    <div class="container mt-3">
+        <div class="row justify-content-center ">
+            <div class="col-12">
+                <div id="carouselExampleCaptions" class="carousel slide">
+                 
+                    <div class="carousel-inner">
+                        <div class="carousel-item active text-light">
+                            <div class="w-100">
+                                <h5 class="text-light mt-3 mb-3 text-center"><b>Open</b> </h5>
+                                <p class="text-light text-center">The best open-source models to create flexible and fit-for-purpose enterprise solutions rather than relying on a single model. <br> leverage cutting-edge innovations from IBM Research and  the open research community <br> to ensure performance, customization, speed, and efficiency. </p>
+                            </div>                        
+                        </div>
+                        <div class="carousel-item text-light">
+                            <div  class="d-block w-100">
+                                <h5 class="textlightk mt-3 mb-3 text-center"><b>Trust</b></h5>
+                                <p class="text-light text-center">Watsonx.governance tracks data, curating methods, and models, enabling AI that can be updated  <br> to meet evolving business and regulatory requirements.</p>
+                            </div>
+                            
+                        </div>
+                        <div class="carousel-item">
+                            <div  class="d-block w-100">
+                                <h5 class="text-light mt-3 mb-3 text-center"><b>Targeted</b></h5>
+                                <p class="text-light text-center">Watsonx is designed to solve real business problems. At IBM, we focus on those domains that drive quick gains in productivity and <br> time to value for enterprises – augmenting and automating HR, customer service, and code generation. <br> We focus on use cases that are scalable and relevant to every industry.</p>
+                            </div>
+                          
+                        </div>
+                        <div class="carousel-item">
+                            <div  class="d-block w-100">
+                                <h5 class="text-light mt-3 text-center"><b>Empower</b></h5>
+                                <p class="text-light text-center">Watsonx allows to train, fine-tune and deploy, and govern the data and AI models you bring to the platform and <br> own completely the value they create. </p>
+                            </div>
+                          
+                        </div>
+
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <p>Emial COunt {{ EmailCOunt }}</p>
+        </div>
+
+    </div>
+
+    <script>
+        window.watsonAssistantChatOptions = {
+          integrationID: "79e1b1d6-4a04-42e9-824d-1f3985788577", // The ID of this integration.
+          region: "us-south", // The region your integration is hosted in.
+          serviceInstanceID: "81c56a4e-7066-4513-998a-93f0efb702c0", // The ID of your service instance.
+          onLoad: function(instance) { instance.render(); }
+        };
+        setTimeout(function(){
+          const t=document.createElement('script');
+          t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+          document.head.appendChild(t);
+        });
+      </script>
+      
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>

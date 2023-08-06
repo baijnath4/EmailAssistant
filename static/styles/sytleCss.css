@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'IBM Plex Sans', sans-serif;
+    background-color: #339af0;
+}
+
+.NavClass{
+    background-color: #000000;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+
+
+}
+
+.NavClass h2{
+    margin-right: 40%;
+    /* transform: translate(40,0); */
+}
+
+.NavClass img{
+    height: auto;
+    width: 40px;
+    stroke: black;
+    margin-left: 20px;
+}
+
+.watsonImg{
+    height: 200px;
+    width: 200px;
+    border-width: 0px;
+    border: none;
+}
+
+/* .container-hero{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+} */
+/* 
+.carousel-item{
+    width: 300px;
+    margin: 0 auto;
+} */
+
+.w-100 {
+    width: 100% !important;
+    height: 40vh;
+  }
+
+.carousel-inner{
+    width: 100% !important;
+    height: 25vh; 
+    background-color: #0f62fe;
+}
+
+.carousel-control-prev,
+.carousel-control-next{
+      bottom: 10%;
+
+}
+
+.carousel-control {
+    color: #b7273a;
+  }
+
+
