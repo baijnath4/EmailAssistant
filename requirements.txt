@@ -1,0 +1,7 @@
+Flask==2.3.2
+ibm_cloud_sdk_core==3.16.7
+ibm_watson==7.0.0
+ibm_watson_machine_learning==1.0.312
+pandas==1.5.2
+pdfminer.six==20221105
+pywin32==306
