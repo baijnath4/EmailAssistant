@@ -52,7 +52,8 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: python-app
-          path: .
+          path:
+            /email.
           
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
