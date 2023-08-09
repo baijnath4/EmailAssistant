@@ -20,8 +20,8 @@ app.secret_key = 'hello'
 #     return render_template('index.html')
 
 
-@app.route('/email', methods=['POST','GET'])
-def email():
+@app.route('/', methods=['POST','GET'])
+def index():
     
     
     

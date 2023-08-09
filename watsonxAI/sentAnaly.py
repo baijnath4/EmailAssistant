@@ -3,7 +3,8 @@ from pandas import read_csv
 
 credentials = {
     "url": "https://us-south.ml.cloud.ibm.com",
-    "apikey": "c2dd7349-54ad-4711-89f8-a431c0bac68a"
+    # "apikey": "c2dd7349-54ad-4711-89f8-a431c0bac68a"
+    "apikey": "JtRx74OmC0rsFnWVBYjT2Qm8auOT7KqfrrT_YE0_NpY0"
 }
 
 project_id = "dea871bd-1746-474d-aab4-89f31526386e"
