@@ -1,31 +1,39 @@
-import os
-import sys
-import win32com.client as win32
+# from exchangelib import Credentials, Account, DELEGATE
 
+# import imaplib
 
-def read_unread_outlook_emails():
-    sys.stdout.reconfigure(encoding='utf-8')
-    outlook = win32.Dispatch("Outlook.Application").GetNamespace("MAPI")
-    inbox = outlook.GetDefaultFolder(6)  # 6 represents the index for the Inbox folder
+# username='baijkuma@in.ibm.com'
+# password= 'Gaya!12345678#&!'
 
-    messages = inbox.Items
-    messages.Sort("[ReceivedTime]", True)  # Sort by received time in descending order
+# # credents = Credentials(username='baijkuma@in.ibm.com', password= 'Gaya!12345678#&!')
 
-    unread_messages = [message for message in messages if message.UnRead]
-    count_unreadEmail = len(unread_messages)
+# # # config = Configuration(server='D50PT006/50/PT/IBM', credentials= credents)
 
-    num_emails = 10
-    print(f'count of unread email:-- {count_unreadEmail}')
-    # for i, message in enumerate(unread_messages):
-    #     if i >= num_emails:
-    #         break
+# # account = Account(
+# #         primary_smtp_address='baijkuma@in.ibm.com',
+# #         credentials=credents, 
+# #         autodiscover=True,
+# #         access_type=DELEGATE)
+# mail = imaplib.IMAP4_SSL('outlook.office365.com')
 
-    #     print(f"Subject: {message.Subject}")
-    #     print(f"From: {message.SenderName}")
-    #     print(f"Received: {message.ReceivedTime}")
-    #     print(f"Body: {message.Body}")
-    #     print("-" * 50)
+# mail.login(username, password)
+# mailbox = 'inbox'
+# mail.select(mailbox)
+# # Search for all emails
+# status, email_ids = mail.search(None, 'ALL')
+# email_id_list = email_ids[0].split()
 
-    return count_unreadEmail
+# # Get the count of emails
+# email_count = len(email_id_list)
+# print(f"Total number of emails in {mailbox}: {email_count}")
 
-print(read_unread_outlook_emails())
+# # Access the inbox folder
+# inbox = account.inbox
+# email_count = inbox.count()
+# print(email_count)
+
+# # # Print the subject and sender of the first 10 emails in the inbox
+# # for item in inbox.all().order_by('-datetime_received')[:10]:
+# #     print(f'Subject: {item.subject}')
+# #     print(f'Sender: {item.sender}')
+# #     print('---')

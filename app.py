@@ -6,10 +6,10 @@ import json
 import os
 import flask
 from pdfminer.high_level import extract_text
-from watsonxAI.EmailNotification import read_unread_outlook_emails
+# from watsonxAI.EmailNotification import read_unread_outlook_emails
 
-EmailCOunt = read_unread_outlook_emails()
-
+# EmailCOunt = read_unread_outlook_emails()
+EmailCOunt = 20
 app = flask.Flask(__name__)
 app.secret_key = 'hello'
 
